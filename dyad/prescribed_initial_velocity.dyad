@@ -1,0 +1,18 @@
+# Prescribes the initial angular velocity to the associated connector
+component PrescribeInitialVelocity
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  parameter w0::Velocity
+  variable w::Velocity
+relations
+  initial w = w0
+  der(spline.phi) = w
+  spline.tau = 0
+metadata {
+  "Dyad": {
+    "labels": [{"label": "initial w=$(w0)", "x": 500, "y": 800, "rot": 0}],
+    "icons": {"default": "dyad://RotationalComponents/Pos-Speed-Acc-Move.svg"}
+  }
+}
+end

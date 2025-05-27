@@ -1,0 +1,21 @@
+# Ideal sensor to measure the relative angular velocity between two splines
+component RelativeVelocitySensor
+  extends PartialRelativeSensor
+  # Relative angular velocity between two splines as output signal
+  w_rel = RealOutput() [{
+    "Dyad": {
+      "placement": {"icon": {"x1": 450, "y1": 950, "x2": 550, "y2": 1050, "rot": 90}}
+    }
+  }]
+  # Relative angle between two splines
+  variable phi_rel::Angle
+relations
+  phi_rel = spline_b.phi-spline_a.phi
+  w_rel = der(phi_rel)
+  0 = spline_a.tau
+metadata {
+  "Dyad": {
+    "icons": {"default": "dyad://RotationalComponents/RelSensor-Angle-Vel-Acc.svg"}
+  }
+}
+end

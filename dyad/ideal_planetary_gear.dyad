@@ -1,0 +1,19 @@
+# Ideal planetary gear box
+component IdealPlanetaryGear
+  # Flange of sun shaft
+  sun = Spline()
+  # Flange of carrier shaft
+  carrier = Spline()
+  # Flange of ring shaft
+  ring = Spline()
+  # Number of ring_teeth/sun_teeth
+  parameter ratio::Real
+relations
+  (1+ratio)*carrier.phi = sun.phi+ratio*ring.phi
+  # torque balance (no inertias)
+  ring.tau = ratio*sun.tau
+  carrier.tau = -(1+ratio)*sun.tau
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/IdealPlanetary.svg"}}
+}
+end

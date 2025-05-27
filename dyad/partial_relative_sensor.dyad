@@ -1,0 +1,13 @@
+# Partial model to measure a single relative variable between two splines
+partial component PartialRelativeSensor
+  # Left spline of shaft
+  spline_a = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  # Right spline of shaft
+  spline_b = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 950, "y1": 450, "x2": 1050, "y2": 550}}}
+  }]
+relations
+  0 = spline_a.tau+spline_b.tau
+end

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="a" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="b" x1="265.47" x2="265.47" y1="523.81" y2="473.81" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5d5d7a"/>
+      <stop offset=".1" stop-color="#7e7ea1"/>
+      <stop offset=".23" stop-color="#a3a5ce"/>
+      <stop offset=".33" stop-color="#bbbdea"/>
+      <stop offset=".39" stop-color="#c4c6f5"/>
+      <stop offset=".4" stop-color="#c1c2f1"/>
+      <stop offset=".52" stop-color="#b1add9"/>
+      <stop offset=".62" stop-color="#a8a1cb"/>
+      <stop offset=".72" stop-color="#a59dc7"/>
+      <stop offset="1" stop-color="#5d5d7a"/>
+    </linearGradient>
+    <linearGradient xlink:href="#b" id="c" x1="419.41" x2="419.41" y1="837.77" y2="163.08"/>
+    <linearGradient xlink:href="#b" id="d" x1="663.89" x2="663.89"/>
+    <style>
+      .g{stroke-width:0;fill:#adaddb}
+    </style>
+  </defs>
+  <path fill="#fff" stroke-width="0" d="M4 4h992v992H4z"/>
+  <path fill="#008a19" stroke-width="0" d="M992 8v984H8V8zm8-8H0v1000h1000z"/>
+  <path fill="url(#b)" stroke-width="0" d="M132.08 473.81h266.77v50H132.08z"/>
+  <path fill="url(#c)" stroke-width="0" d="M538.39 163.08h-71.56c-93.16 0-168.67 151.04-168.67 337.35s75.52 337.35 168.67 337.35h73.83"/>
+  <ellipse cx="533.98" cy="500.42" fill="#6e6ea1" stroke-width="0" rx="149.77" ry="337.35"/>
+  <ellipse cx="534.03" cy="500.42" class="g" rx="63.43" ry="150.11"/>
+  <path fill="url(#d)" stroke-width="0" d="M797.07 473.81H546.64c-2.87 0-5.51.89-6.96 2.35-4.23 4.24-8.58 12.46-8.95 23.1-.31 9.09 4.9 17.22 9.09 21.98 1.39 1.58 4.15 2.57 7.17 2.57h250.09v-50Z"/>
+  <ellipse cx="799.48" cy="498.81" class="g" rx="15.24" ry="25"/>
+  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="6" d="M149.15 951.09V602.13h85.97M148.23 398.2h86.89"/>
+  <path d="M821.24 399.59h79.1v20h-79.1z" class="g"/>
+  <path d="M880.34 399.59h20v201h-20z" class="g"/>
+  <path d="M899.34 471.44h20v57.29h-20zm-78.1 109.15h79.1v20h-79.1z" class="g"/>
+</svg>

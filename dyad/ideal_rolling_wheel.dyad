@@ -1,0 +1,12 @@
+# Simple 1-dim. model of an ideal rolling wheel without inertia
+component IdealRollingWheel
+  extends PartialElementaryRotationalToTranslational
+  # wheel radius
+  parameter radius::Length
+relations
+  (spline.phi-support_r.phi)*radius = flange.s-support_t.s
+  0 = radius*flange.f+spline.tau
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/IdealRollingWheel.svg"}}
+}
+end

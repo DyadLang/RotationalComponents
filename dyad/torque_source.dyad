@@ -1,0 +1,11 @@
+# Input signal acting as external torque on a spline
+component TorqueSource
+  extends PartialTorque
+  # Accelerating torque acting at spline
+  tau = RealInput() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+relations
+  spline.tau = -tau
+metadata {"Dyad": {"icons": {"default": "dyad://RotationalComponents/Torque.svg"}}}
+end

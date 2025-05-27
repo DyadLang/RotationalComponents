@@ -1,0 +1,11 @@
+# Shaft fixed in housing at a given angle.
+component Fixed
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 450, "y1": -50, "x2": 550, "y2": 50}}}
+  }]
+  # Fixed offset angle of the shaft
+  parameter phi0::Angle = 0.0
+relations
+  spline.phi = phi0
+metadata {"Dyad": {"icons": {"default": "dyad://RotationalComponents/Fixed.svg"}}}
+end

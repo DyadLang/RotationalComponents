@@ -1,0 +1,17 @@
+# Partial model to transform rotational into translational motion
+partial component PartialElementaryRotationalToTranslational
+  # Rotational shaft
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  # Translational shaft
+  flange = Flange() [{
+    "Dyad": {"placement": {"icon": {"x1": 950, "y1": 450, "x2": 1050, "y2": 550}}}
+  }]
+  support_r = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 100, "y1": 950, "x2": 200, "y2": 1050}}}
+  }]
+  support_t = Flange() [{
+    "Dyad": {"placement": {"icon": {"x1": 800 , "y1": 950, "x2": 900, "y2": 1050}}}
+  }]
+end

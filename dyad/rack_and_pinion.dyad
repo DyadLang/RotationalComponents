@@ -1,0 +1,10 @@
+# Simple 1-dim. model of rack and pinion system without inertia. Rotational motion
+# of circular gear (pinion) is converted to linear motion of linear gear (rack).
+component RackAndPinion
+  extends IdealRollingWheel
+  # Pinion radius
+  parameter radius::Length
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/IdealRollingWheel.svg"}}
+}
+end

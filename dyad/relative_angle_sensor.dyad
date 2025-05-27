@@ -1,0 +1,18 @@
+# Ideal sensor to measure the relative angle between two splines
+component RelativeAngleSensor
+  extends PartialRelativeSensor
+  # Relative angle between two splines as output signal
+  phi_rel = RealOutput() [{
+    "Dyad": {
+      "placement": {"icon": {"x1": 450, "y1": 950, "x2": 550, "y2": 1050, "rot": 90}}
+    }
+  }]
+relations
+  phi_rel = spline_b.phi-spline_a.phi
+  0 = spline_a.tau
+metadata {
+  "Dyad": {
+    "icons": {"default": "dyad://RotationalComponents/RelSensor-Angle-Vel-Acc.svg"}
+  }
+}
+end

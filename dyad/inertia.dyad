@@ -1,0 +1,19 @@
+# 1D-rotational component with inertia.
+component Inertia
+  extends PartialTwoSplines
+  # Moment of inertia
+  parameter J::MomentOfInertia
+  # Absolute rotation angle
+  variable phi::Angle
+  # Absolute angular velocity
+  variable w::AngularVelocity
+  # Absolute angular acceleration
+  variable a::AngularAcceleration
+relations
+  phi = spline_a.phi
+  phi = spline_b.phi
+  D(phi) = w
+  D(w) = a
+  J*a = spline_a.tau+spline_b.tau
+metadata {"Dyad": {"icons": {"default": "dyad://RotationalComponents/Inertia.svg"}}}
+end
