@@ -1,0 +1,16 @@
+# Prescribes the initial position to the associated connector
+component PrescribeInitialPosition
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  parameter phi0::Dyad.Angle
+relations
+  initial spline.phi = phi0
+  spline.tau = 0
+metadata {
+  "Dyad": {
+    "labels": [{"label": "initial phi = $(phi0)", "x": 500, "y": 800, "rot": 0}],
+    "icons": {"default": "dyad://RotationalComponents/Pos-Speed-Acc-Move.svg"}
+  }
+}
+end

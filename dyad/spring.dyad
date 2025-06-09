@@ -1,0 +1,11 @@
+# Linear 1D rotational spring
+component Spring
+  extends PartialCompliant
+  # Spring constant
+  parameter c::RotationalSpringConstant
+  # Unstretched spring angle
+  parameter phi_rel0::Angle = 0.0
+relations
+  tau = c*(phi_rel-phi_rel0)
+metadata {"Dyad": {"icons": {"default": "dyad://RotationalComponents/Spring.svg"}}}
+end

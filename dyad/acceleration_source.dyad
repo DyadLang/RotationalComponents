@@ -1,0 +1,22 @@
+# Forced movement of a spline according to an acceleration signal
+component AccelerationSource
+  extends PartialElementaryOneSplineAndSupport
+  # Absolute angular acceleration of spline with respect to support as input signal
+  a_ref = RealInput() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  # Rotation angle of spline with respect to support
+  variable phi::Angle
+  # Angular velocity of spline with respect to support
+  variable w::AngularVelocity
+  # Angular acceleration of spline with respect to support
+  variable a::AngularAcceleration
+relations
+  phi = spline.phi-phi_support
+  w = der(phi)
+  a = der(w)
+  a = a_ref
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/Pos-Speed-Acc-Move.svg"}}
+}
+end

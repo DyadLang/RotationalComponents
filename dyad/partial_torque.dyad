@@ -1,0 +1,8 @@
+# Partial model of a torque acting at the spline
+partial component PartialTorque
+  extends PartialElementaryOneSplineAndSupport
+  # Angle of spline with respect to support
+  variable phi::Real
+relations
+  phi = spline.phi-phi_support
+end

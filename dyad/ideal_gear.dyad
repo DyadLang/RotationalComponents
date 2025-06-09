@@ -1,0 +1,19 @@
+# This element characterizes any type of gear box which is fixed in the ground and
+# which has one driving shaft and one driven shaft.
+component IdealGear
+  extends PartialElementaryTwoSplinesAndSupport
+  # Transmission ratio
+  parameter ratio::Real
+  # Relative angle between shaft a and the support
+  variable phi_a::Angle
+  # Relative angle between shaft b and the support
+  variable phi_b::Angle
+relations
+  phi_a = spline_a.phi-phi_support
+  phi_b = spline_b.phi-phi_support
+  phi_a = ratio*phi_b
+  0 = ratio*spline_a.tau+spline_b.tau
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/IdealGear.svg"}}
+}
+end

@@ -1,0 +1,17 @@
+# Partial model for the compliant connection of two rotational 1-dim. shaft splines.
+partial component PartialCompliant
+  spline_a = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  spline_b = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 950, "y1": 450, "x2": 1050, "y2": 550}}}
+  }]
+  # Relative rotation angle between splines
+  variable phi_rel::Angle
+  # Torque between splines
+  variable tau::Torque
+relations
+  phi_rel = spline_b.phi-spline_a.phi
+  spline_b.tau = tau
+  spline_a.tau = -tau
+end

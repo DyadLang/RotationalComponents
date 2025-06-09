@@ -1,0 +1,30 @@
+test component TwoInertiasWithDrivingTorque
+  fixed = Fixed()
+  torque = TorqueSource()
+  inertia1 = Inertia(J=2)
+  inertia2 = Inertia(J=4)
+  spring = Spring(c=1e4)
+  damper = Damper(d=10)
+  sine = BlockComponents.Sine(amplitude=10, frequency=5)
+relations
+  initial inertia1.phi = 1
+  initial inertia2.phi = 0.5
+  initial inertia2.a = 0
+  connect(sine.y, torque.tau)
+  connect(torque.support, fixed.spline)
+  connect(torque.spline, inertia1.spline_a)
+  connect(inertia1.spline_b, spring.spline_a, damper.spline_a)
+  connect(spring.spline_b, damper.spline_b, inertia2.spline_a)
+metadata {
+  "Dyad": {
+    "tests": {
+      "case1": {
+        "stop": 1,
+        "expect": {
+          "initial": {"inertia1.phi": 1, "inertia2.phi": 0.5, "inertia1.w": -500, "inertia2.w ": 0}
+        }
+      }
+    }
+  }
+}
+end

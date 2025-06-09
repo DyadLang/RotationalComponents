@@ -1,0 +1,12 @@
+# Gearbox transforming rotational into translational motion
+component IdealGearR2T
+  extends PartialElementaryRotationalToTranslational
+  # Transmission ratio (flange_a.phi/flange_b.s)
+  parameter ratio::Real(units="rad/m")
+relations
+  spline.phi-support_r.phi = ratio*flange.s-support_t.s
+  0 = ratio*spline.tau+flange.f
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/IdealGearR2T.svg"}}
+}
+end

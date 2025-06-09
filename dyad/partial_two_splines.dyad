@@ -1,0 +1,8 @@
+partial component PartialTwoSplines
+  spline_a = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  spline_b = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 950, "y1": 450, "x2": 1050, "y2": 550}}}
+  }]
+end

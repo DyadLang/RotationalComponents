@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .b{stroke:#000;stroke-linejoin:round;stroke-width:8px;fill:none}
+    </style>
+  </defs>
+  <path fill="#fff" stroke-width="0" d="M4 4h992v992H4z"/>
+  <path fill="#008a19" stroke-width="0" d="M992 8v984H8V8zm8-8H0v1000h1000z"/>
+  <circle cx="500" cy="500" r="196.93" fill="#89b2ff" stroke="#000" stroke-linejoin="round" stroke-width="8"/>
+  <path d="M-3.06 507.94h10" class="b"/>
+  <path fill="none" stroke="#000" stroke-dasharray="0 0 20.44 10.22" stroke-linejoin="round" stroke-width="8" d="M17.16 507.94h270.8"/>
+  <path d="M293.07 507.94h10m393.86 0h10" class="b"/>
+  <path fill="none" stroke="#000" stroke-dasharray="0 0 20.67 10.33" stroke-linejoin="round" stroke-width="8" d="M717.26 507.94h273.83"/>
+  <path d="M996.25 507.94h10" class="b"/>
+  <path stroke-width="0" d="M542.87 504.21c12.91 9.76 19.36 23.23 19.36 40.43s-6.21 30.72-18.62 40.58c-12.42 9.85-29.66 14.78-51.74 14.78s-40.11-3.4-54.1-10.2v-30.15c18.92 8.97 37.64 13.45 56.17 13.45 12.32 0 21.53-2.34 27.64-7.02s9.16-10.91 9.16-18.7-2.71-14.17-8.13-19.14q-8.13-7.47-34.59-18.18c-17.64-7.14-30.06-15.35-37.25-24.61s-10.79-20.3-10.79-33.11c0-16.26 5.79-29.05 17.37-38.36s26.83-13.97 45.75-13.97 37.69 4.09 56.32 12.27l-10.2 26.02c-17.44-7.29-32.87-10.94-46.27-10.94-10.05 0-17.79 2.19-23.21 6.58s-8.13 10.32-8.13 17.81c0 5.12 1.04 9.51 3.11 13.15 2.36 3.75 5.94 7.15 10.72 10.2 4.78 3.06 13.89 7.39 27.35 13.01 13.45 5.62 23.48 10.99 30.08 16.11Z"/>
+</svg>

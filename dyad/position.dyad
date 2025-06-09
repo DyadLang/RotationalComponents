@@ -1,0 +1,16 @@
+# Forced movement of a spline according to a reference angle signal
+component Position
+  extends PartialElementaryOneSplineAndSupport
+  # Reference angle of spline with respect to support as input signal
+  phi_ref = RealInput() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  # Rotation angle of spline with respect to support
+  variable phi::Angle
+relations
+  phi = spline.phi-phi_support
+  phi = phi_ref
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/Pos-Speed-Acc-Move.svg"}}
+}
+end

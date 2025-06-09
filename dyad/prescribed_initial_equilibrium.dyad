@@ -1,0 +1,24 @@
+# Prescribes initial equilibrium state aka zero initial angular velocity and zero
+# angular acceleration to the associated connector.
+component PrescribeInitialEquilibrium
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  variable w::Velocity
+  variable a::Acceleration
+relations
+  initial w = 0
+  initial a = 0
+  spline.tau = 0
+  w = der(spline.phi)
+  a = der(w)
+metadata {
+  "Dyad": {
+    "labels": [
+      {"label": "initial w = 0", "x": 500, "y": 150, "rot": 0},
+      {"label": "initial a = 0", "x": 500, "y": 800, "rot": 0}
+    ],
+    "icons": {"default": "dyad://RotationalComponents/Pos-Speed-Acc-Move.svg"}
+  }
+}
+end

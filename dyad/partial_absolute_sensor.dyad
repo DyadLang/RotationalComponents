@@ -1,0 +1,9 @@
+# Partial model to measure a single absolute spline variable
+partial component PartialAbsoluteSensor
+  # Spline of the shaft from which sensor information shall be measured
+  spline = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+relations
+  0 = spline.tau
+end

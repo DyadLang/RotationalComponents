@@ -1,0 +1,21 @@
+# Linear 1D rotational spring and damper
+component SpringDamper
+  extends PartialCompliantWithRelativeStates
+  # Spring torque
+  variable tau_c::Torque
+  # Damper torque
+  variable tau_d::Torque
+  # Damping constant
+  parameter d::RotationalDampingConstant
+  # Spring constant
+  parameter c::RotationalSpringConstant
+  # Unstretched spring angle
+  parameter phi_rel0::Angle = 0.0
+relations
+  tau_c = c*(phi_rel-phi_rel0)
+  tau_d = d*w_rel
+  tau = tau_c+tau_d
+metadata {
+  "Dyad": {"icons": {"default": "dyad://RotationalComponents/SpringDamper.svg"}}
+}
+end

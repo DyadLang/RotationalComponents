@@ -1,0 +1,20 @@
+# Partial model for a component with two rotational 1-dim. shaft splines and a
+# support spline used for textual modeling i.e., for elementary models
+partial component PartialElementaryTwoSplinesAndSupport
+  spline_a = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": -50, "y1": 450, "x2": 50, "y2": 550}}}
+  }]
+  spline_b = Spline() [{
+    "Dyad": {"placement": {"icon": {"x1": 950, "y1": 450, "x2": 1050, "y2": 550}}}
+  }]
+  support = Spline() [{
+    "Dyad": {
+      "placement": {"icon": {"iconName": "support", "x1": 450, "y1": 950, "x2": 550, "y2": 1050}}
+    }
+  }]
+  # Absolute angle of support spline
+  variable phi_support::Angle
+relations
+  support.phi = phi_support
+  support.tau = -spline_a.tau-spline_b.tau
+end

@@ -1,0 +1,12 @@
+# Partial model for the compliant connection of two rotational 1-dim. shaft splines
+# where the relative angle and speed are used as preferred states.
+partial component PartialCompliantWithRelativeStates
+  extends PartialCompliant
+  # Relative angular velocity between splines
+  variable w_rel::AngularVelocity
+  # Relative angular acceleration between splines
+  variable a_rel::AngularAcceleration
+relations
+  der(phi_rel) = w_rel
+  der(w_rel) = a_rel
+end

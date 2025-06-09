@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="a" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="b" x1="815.14" x2="815.14" y1="525" y2="475" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5d5d7a"/>
+      <stop offset=".1" stop-color="#7e7ea1"/>
+      <stop offset=".23" stop-color="#a3a5ce"/>
+      <stop offset=".33" stop-color="#bbbdea"/>
+      <stop offset=".39" stop-color="#c4c6f5"/>
+      <stop offset=".4" stop-color="#c1c2f1"/>
+      <stop offset=".52" stop-color="#b1add9"/>
+      <stop offset=".62" stop-color="#a8a1cb"/>
+      <stop offset=".72" stop-color="#a59dc7"/>
+      <stop offset="1" stop-color="#5d5d7a"/>
+    </linearGradient>
+    <linearGradient xlink:href="#b" id="c" x1="184.12" x2="184.12"/>
+    <linearGradient xlink:href="#b" id="d" x1="498.88" x2="498.88" y1="789.41" y2="201.15"/>
+    <style>
+      .f{stroke-width:0;fill:#231f20}
+    </style>
+  </defs>
+  <path fill="#fff" stroke-width="0" d="M4 4h992v992H4z"/>
+  <path fill="#008a19" stroke-width="0" d="M992 8v984H8V8zm8-8H0v1000h1000z"/>
+  <path fill="url(#b)" stroke-width="0" d="M682.14 475h266v50h-266z"/>
+  <path fill="url(#c)" stroke-width="0" d="M48.1 475h272.05v50H48.1z"/>
+  <rect width="440" height="447" x="279.14" y="268.42" fill="#6e6ea1" stroke-width="0" rx="106.98" ry="106.98"/>
+  <path fill="url(#d)" stroke-width="0" d="M348.88 201.15h300v588.27h-300z"/>
+  <path d="M299.77 766.18h401.62v33.9H299.77z" class="f"/>
+  <path d="M523.3 572.61h-50.31l-139.21 204.4h329.91z" class="f"/>
+</svg>

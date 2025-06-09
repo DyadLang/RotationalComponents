@@ -1,0 +1,27 @@
+# Ideal sensor to measure the absolute angular velocity, torque and power between two splines
+component MultiSensor
+  extends PartialRelativeSensor
+  # Power in spline `spline_a` as output signal
+  power = RealOutput() [{
+    "Dyad": {
+      "placement": {"icon": {"x1": 175, "y1": 950, "x2": 275, "y2": 1050, "rot": 90}}
+    }
+  }]
+  # Torque in spline `spline_`a as output signal
+  tau = RealOutput() [{
+    "Dyad": {
+      "placement": {"icon": {"x1": 450, "y1": 950, "x2": 550, "y2": 1050, "rot": 90}}
+    }
+  }]
+  # Absolute angular velocity of spline `spline_a` as output signal
+  w = RealOutput() [{
+    "Dyad": {
+      "placement": {"icon": {"x1": 725, "y1": 950, "x2": 825, "y2": 1050, "rot": 90}}
+    }
+  }]
+relations
+  spline_a.phi = spline_b.phi
+  w = der(spline_a.phi)
+  tau = spline_a.tau
+  power = tau*w
+end
